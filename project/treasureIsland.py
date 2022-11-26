@@ -27,7 +27,7 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 
 #Write your code below this line 👇
 print('Welcome to Treasure Island. \nYour mission is to find the treasure.')
-firstPick = input('Youre at a cross road. Where do you want to go? Type "left" or "right"\n').lower()
+firstPick = input('You\'re at a cross road. Where do you want to go? Type "left" or "right"\n').lower()
 if firstPick == 'left':
     secondPick = input('You came to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across\n').lower()
     if secondPick == 'wait':
@@ -38,6 +38,8 @@ if firstPick == 'left':
             print('You found the Treasure. Enjoy!')
         elif lastPick == 'blue':
             print('You were eaten by beasts. Game Over \n')
+        else:
+            print('You chose a door that doest exist. Game Over.')
     else:
         print('You were attacked by Sharks. Game Over \n')
 else:
