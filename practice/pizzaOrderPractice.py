@@ -1,33 +1,34 @@
-# Instructions
-# Congratulations, you've got a job at Python Pizza. Your first job is to build an automatic pizza order program.
-# Based on a user's order, work out their final bill.
-# Small Pizza: $15
-# Medium Pizza: $20
-# Large Pizza: $25
-# Pepperoni for Small Pizza: +$2
-# Pepperoni for Medium or Large Pizza: +$3
-# Extra cheese for any size pizza: + $1
-
 # 🚨 Don't change the code below 👇
-print("Welcome to Python Pizza Deliveries!")
-size = input("What size pizza do you want? S, M, or L ")
-add_pepperoni = input("Do you want pepperoni? Y or N ")
-extra_cheese = input("Do you want extra cheese? Y or N ")
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
-bill = 0
-if size == "S":
-    bill = 15
-elif size == "M":
-    bill = 20
-elif size == "L":
-    bill = 25
-if add_pepperoni == "Y" and size == "S":
-    bill += 2
-elif add_pepperoni == "Y":
-    bill += 3
-if extra_cheese == "Y":
-    bill += 1
+true = ['t', 'r', 'u', 'e']
+love = ['l', 'o', 'v', 'e']
+count1 = 0
+count2 = 0
 
-print(f"Your final bill is: ${bill}")
+trueCombined = name1 + name2
+
+for i in trueCombined.lower():
+    if str(i) in true:
+        count1+= 1
+# for y in name2.lower():
+#     if str(y) in true:
+#         count1+= 1
+for i in trueCombined.lower():
+    if str(i) in love:
+        count2+= 1
+# for y in name2.lower():
+#     if str(y) in love:
+#         count2+= 1
+total = str(count1) + str(count2)
+total = int(total)
+if total < 10 or total > 90:
+    print(f"Your score is {total}, you go together like coke and mentos.")
+elif total >=40 and total <= 50:
+    print(f"Your score is {total}, you are alright together.")
+else:
+    print(f"Your score is {total}.")
